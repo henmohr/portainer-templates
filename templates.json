@@ -8,7 +8,7 @@
       "platform": "linux",
       "logo": "https://secure.gravatar.com/avatar/d75ff984cf7283e0585dcbe4259fba28.jpg",
       "repository": {
-        "url": "https://github.com/IndividualDifference/docker-wordpress",
+        "url": "https://github.com/IndividualDifference/portainer-templates",
         "stackfile": "swarmpit-stack.yml"
       }
     },
@@ -22,7 +22,7 @@
       "logo": "https://portainer.io/images/logos/wordpress.png",
       "repository": {
         "url": "https://github.com/IndividualDifference/docker-wordpress",
-        "stackfile": "tdwp-stack.yml"
+        "stackfile": "td-wp.yml"
       },
       "env": [
         {
