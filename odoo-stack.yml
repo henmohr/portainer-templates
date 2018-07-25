@@ -1,0 +1,33 @@
+version: '3.1'
+
+services:
+  db:
+    image: postgres:11-alpine
+    networks:
+      - "charm-net"
+    environment:
+      - "POSTGRES_PASSWORD=${POSTGRES_ROOT_PASSWORD}"
+      - "POSTGRES_DB=odoo"
+      - "POSTGRES_USER=odoo"
+      - "POSTGRES_PASSWORD=${POSTGRES_PASSWORD}"
+
+  odoo:
+    image: odoo:latest
+    networks:
+      - "charm-net"
+    ports:
+      - "${ODOO_PORT}:8069"
+    volumes:
+      - "db-data:/var/lib/postgresql/data/pgdata"
+    environment:
+      - "HOST=db"
+      - "USER=odoo"
+      - "PASSWORD=${POSTGRES_PASSWORD}"
+
+networks:
+  charm-net:
+    driver: overlay
+
+volumes:
+  db-data:
+    driver: local
