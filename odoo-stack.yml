@@ -7,6 +7,7 @@ services:
       - "charm-net"
     environment:
       - "POSTGRES_PASSWORD=${POSTGRES_ROOT_PASSWORD}"
+      - "POSTGRES_DB=odooadd"
       - "POSTGRES_USER=odoo"
       - "POSTGRES_PASSWORD=${POSTGRES_PASSWORD}"
 
