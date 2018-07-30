@@ -44,6 +44,11 @@
           "name": "WP_SITE_URL",
           "label": "URL of the WordPress site",
           "description": "URl used by the wordpress site"
+        },
+        {
+          "name": "WP_BACKUP_URL",
+          "label": "Link to an existing WordPress backup (not required)",
+          "description": "Link used to import WordPress backup"
         }
       ]
   },
