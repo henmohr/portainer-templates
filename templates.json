@@ -103,18 +103,7 @@
         {
           "name": "AD_NW",
           "label": "Network of the Adminer",
-          "description": "Port used by the adminer site",
-          "select": [
-            {
-              "text": "wp-net",
-              "value": "wp-net",
-              "default": true
-            },
-            {
-              "text": "charm-net",
-              "value": "charm-net"
-            }
-          ]
+          "description": "Network used by the adminer site"
         }
       ]
     }
