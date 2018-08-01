@@ -61,8 +61,8 @@
       "platform": "linux",
       "logo": "https://avatars0.githubusercontent.com/u/6368483?s=200&v=4",
       "repository": {
-      "url": "https://github.com/IndividualDifference/portainer-templates",
-      "stackfile": "odoo-stack.yml"
+        "url": "https://github.com/IndividualDifference/portainer-templates",
+        "stackfile": "odoo-stack.yml"
     },
       "env": [
         {
@@ -114,7 +114,7 @@
               "text": "charm-net",
               "value": "charm-net"
             }
-          ],
+          ]
         }
       ]
     }
