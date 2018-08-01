@@ -4,7 +4,7 @@
       "title": "Swarmpit",
       "description": "Lightweight Docker Swarm management UI",
       "note": "Deploys a Swarmpit instance connected to a couchdb database.",
-      "categories": ["SwarmUI"],
+      "categories": ["SwarmGUI"],
       "platform": "linux",
       "logo": "https://secure.gravatar.com/avatar/d75ff984cf7283e0585dcbe4259fba28.jpg",
       "repository": {
@@ -51,35 +51,35 @@
           "description": "Link used to import WordPress backup"
         }
       ]
-  },
-  {
-    "type": "stack",
-    "title": "TheDiffrentOdoo",
-    "description": "Odoo setup with a PostgreSQL database based on Alpine Linux",
-    "note": "Deploys a Odoo instance connected to a MySQL database.",
-    "categories": ["CRM"],
-    "platform": "linux",
-    "logo": "https://avatars0.githubusercontent.com/u/6368483?s=200&v=4",
-    "repository": {
+    },
+    {
+      "type": "stack",
+      "title": "TheDiffrentOdoo",
+      "description": "Odoo setup with a PostgreSQL database based on Alpine Linux",
+      "note": "Deploys a Odoo instance connected to a MySQL database.",
+      "categories": ["CRM"],
+      "platform": "linux",
+      "logo": "https://avatars0.githubusercontent.com/u/6368483?s=200&v=4",
+      "repository": {
       "url": "https://github.com/IndividualDifference/portainer-templates",
       "stackfile": "odoo-stack.yml"
     },
-    "env": [
-      {
-        "name": "POSTGRES_ROOT_PASSWORD",
-        "label": "Database root password",
-        "description": "Password used by the PostgreSQL root user."
-      },
-      {
-        "name": "POSTGRES_PASSWORD",
-        "label": "Database user password",
-        "description": "WordPress's PostgreSQL password"
-      },
-      {
-        "name": "ODOO_PORT",
-        "label": "Port of the Odoo site",
-        "description": "Port used by the odoo site"
-      }
-    ]
-  }
+      "env": [
+        {
+          "name": "POSTGRES_ROOT_PASSWORD",
+          "label": "Database root password",
+          "description": "Password used by the PostgreSQL root user."
+        },
+        {
+          "name": "POSTGRES_PASSWORD",
+          "label": "Database user password",
+          "description": "Odoo's PostgreSQL password"
+        },
+        {
+          "name": "ODOO_PORT",
+          "label": "Port of the Odoo site",
+          "description": "Port used by the odoo site"
+        }
+      ]
+    }
 ]
