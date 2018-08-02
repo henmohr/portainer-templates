@@ -4,7 +4,9 @@ services:
   db:
     image: postgres:11-alpine
     networks:
-      - "charm-net"
+      - "local"
+      - "dbgui"
+
     environment:
       - "POSTGRES_PASSWORD=${POSTGRES_ROOT_PASSWORD}"
       - "POSTGRES_DB=odooadd"
@@ -14,7 +16,8 @@ services:
   odoo:
     image: odoo:latest
     networks:
-      - "charm-net"
+      - "local"
+      - "rvproxy"
     ports:
       - "${ODOO_PORT}:8069"
     volumes:
@@ -25,8 +28,16 @@ services:
       - "PASSWORD=${POSTGRES_PASSWORD}"
 
 networks:
-  charm-net:
+  local:
     driver: overlay
+
+  dbgui:
+    external:
+      name: adminer-net
+
+  rvproxy:
+    external:
+      name: traefik-net
 
 volumes:
   db-data:
