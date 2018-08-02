@@ -99,11 +99,6 @@
           "name": "AD_PORT",
           "label": "Port of the Adminer site",
           "description": "Port used by the adminer site"
-        },
-        {
-          "name": "AD_NW",
-          "label": "Network of the Adminer",
-          "description": "Network used by the adminer site"
         }
       ]
     }
