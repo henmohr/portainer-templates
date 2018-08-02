@@ -71,11 +71,6 @@
           "description": "Password used by the PostgreSQL root user."
         },
         {
-          "name": "POSTGRES_PASSWORD",
-          "label": "Database user password",
-          "description": "Odoo's PostgreSQL password"
-        },
-        {
           "name": "ODOO_PORT",
           "label": "Port of the Odoo site",
           "description": "Port used by the odoo site"
