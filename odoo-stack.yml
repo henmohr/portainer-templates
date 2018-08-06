@@ -24,7 +24,7 @@ services:
     environment:
       - "HOST=db"
       - "USER=odoo"
-      - "PASSWORD=${POSTGRES_PASSWORD}"
+      - "PASSWORD=${POSTGRES_ROOT_PASSWORD}"
 
 networks:
   local:
