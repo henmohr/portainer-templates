@@ -49,6 +49,26 @@
           "name": "WP_BACKUP_URL",
           "label": "Link to an existing WordPress backup (not required)",
           "description": "Link used to import WordPress backup"
+        },
+        {
+          "name": "WP_BACKUP_GIT_REPO",
+          "label": "Link to an existing WordPress backup repository (not required)",
+          "description": "Link used to import WordPress backup repository"
+        },
+        {
+          "name": "WP_BACKUP_GIT_USER",
+          "label": "Username of a related git account",
+          "description": "Username used to connect to backup repository"
+        },
+        {
+          "name": "WP_BACKUP_GIT_PASSWD",
+          "label": "Password of the git account",
+          "description": "Password used to connect to backup repository"
+        },
+        {
+          "name": "WP_BACKUP_INTERVAL",
+          "label": "Backup interval",
+          "description": "Time between two backups"
         }
       ]
     },
