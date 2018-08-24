@@ -51,22 +51,22 @@
           "description": "Link used to import WordPress backup"
         },
         {
-          "name": "WP_BACKUP_GIT_REPO",
+          "name": "GINA_GIT_REPO",
           "label": "Link to an existing WordPress backup repository (not required)",
           "description": "Link used to import WordPress backup repository"
         },
         {
-          "name": "WP_BACKUP_GIT_USER",
+          "name": "GINA_GIT_USER",
           "label": "Username of a related git account",
           "description": "Username used to connect to backup repository"
         },
         {
-          "name": "WP_BACKUP_GIT_PASSWD",
+          "name": "GINA_GIT_PASSWD",
           "label": "Password of the git account",
           "description": "Password used to connect to backup repository"
         },
         {
-          "name": "WP_BACKUP_INTERVAL",
+          "name": "GINA_INTERVAL",
           "label": "Backup interval",
           "description": "Time between two backups"
         }
