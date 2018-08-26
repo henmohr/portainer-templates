@@ -31,6 +31,11 @@
           "description": "Password used by the MySQL root user."
         },
         {
+          "name": "MYSQL_USER",
+          "label": "Database user",
+          "description": "User used by the WordPress site."
+        },
+        {
           "name": "MYSQL_PASSWORD",
           "label": "Database user password",
           "description": "WordPress's MariaDB password"
@@ -52,8 +57,8 @@
         },
         {
           "name": "GINA_GIT_REPO",
-          "label": "Link to an existing WordPress backup repository (not required)",
-          "description": "Link used to import WordPress backup repository"
+          "label": "Link to an existing backup repository (not required)",
+          "description": "Link used to import/export backup repository"
         },
         {
           "name": "GINA_GIT_USER",
