@@ -10,7 +10,14 @@
       "repository": {
         "url": "https://github.com/IndividualDifference/portainer-templates",
         "stackfile": "swarmpit-stack.yml"
-      }
+      },
+      "env": [
+        {
+          "name": "TRAEFIK_FR_Host",
+          "label": "Subdomain",
+          "description": "Subdomain of the service for the reverse proxy."
+        }
+      ]
     },
     {
       "type": "stack",
@@ -25,6 +32,11 @@
         "stackfile": "td-wp.yml"
       },
       "env": [
+        {
+          "name": "TRAEFIK_FR_Host",
+          "label": "Subdomain",
+          "description": "Subdomain of the service for the reverse proxy."
+        },
         {
           "name": "MYSQL_ROOT_PASSWORD",
           "label": "Database root password",
@@ -91,6 +103,11 @@
     },
       "env": [
         {
+          "name": "TRAEFIK_FR_Host",
+          "label": "Subdomain",
+          "description": "Subdomain of the service for the reverse proxy."
+        },
+        {
           "name": "POSTGRES_ROOT_PASSWORD",
           "label": "Database root password",
           "description": "Password used by the PostgreSQL root user."
@@ -115,6 +132,11 @@
         "stackfile": "td-ad.yml"
       },
       "env": [
+        {
+          "name": "TRAEFIK_FR_Host",
+          "label": "Subdomain",
+          "description": "Subdomain of the service for the reverse proxy."
+        },
         {
           "name": "AD_PORT",
           "label": "Port of the Adminer site",
