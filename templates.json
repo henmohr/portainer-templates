@@ -43,19 +43,9 @@
           "description": "Password used by the MySQL root user."
         },
         {
-          "name": "MYSQL_USER",
-          "label": "Database user",
-          "description": "User used by the WordPress site."
-        },
-        {
           "name": "MYSQL_PASSWORD",
           "label": "Database user password",
           "description": "WordPress's MariaDB password"
-        },
-        {
-          "name": "WP_PORT",
-          "label": "Port of the WordPress site",
-          "description": "Port used by the wordpress site"
         },
         {
           "name": "WP_SITE_URL",
