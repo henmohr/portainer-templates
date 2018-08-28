@@ -54,27 +54,27 @@
         },
         {
           "name": "WP_BACKUP_URL",
-          "label": "Link to an existing WordPress backup (not required)",
+          "label": "Link to an existing WordPress backup (link to *.tar.gz)",
           "description": "Link used to import WordPress backup"
         },
         {
           "name": "GINA_GIT_REPO",
-          "label": "Link to an existing backup repository (not required)",
+          "label": "Link to an existing backup repository (GINAvbs)",
           "description": "Link used to import/export backup repository"
         },
         {
           "name": "GINA_GIT_USER",
-          "label": "Username of a related git account",
+          "label": "Username of a related git account (GINAvbs)",
           "description": "Username used to connect to backup repository"
         },
         {
           "name": "GINA_GIT_PASSWD",
-          "label": "Password of the git account",
+          "label": "Password of the git account (GINAvbs)",
           "description": "Password used to connect to backup repository"
         },
         {
           "name": "GINA_INTERVAL",
-          "label": "Backup interval",
+          "label": "Backup interval (GINAvbs)",
           "description": "Time between two backups"
         }
       ]
