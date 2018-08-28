@@ -5,17 +5,18 @@ services:
     image: swarmpit/swarmpit:latest
     environment:
       - "SWARMPIT_DB=http://db:5984"
-    labels:
-      - "traefik.enable=true"
-      - "traefik.port=8080"
-      - "traefik.docker.network=traefik-net"
-      - "traefik.frontend.rule=Host:${TRAEFIK_FR_Host}"
-      - "traefik.backend=${DOCKERCLOUD_CONTAINER_HOSTNAME}"
     volumes:
       - "/var/run/docker.sock:/var/run/docker.sock:ro"
     networks:
       - swarmpit-net
+      - rvproxy
     deploy:
+      labels:
+        traefik.enable: 'true'
+        traefik.port: 8080
+        traefik.docker.network: traefik-net
+        traefik.frontend.rule: Host:${TRAEFIK_FR_Host}
+        traefik.backend: ${DOCKERCLOUD_CONTAINER_HOSTNAME}
       resources:
         limits:
           cpus: '0.50'
@@ -54,6 +55,9 @@ services:
 networks:
   swarmpit-net:
     driver: overlay
+  rvproxy:
+    external:
+      name: traefik-net
 
 volumes:
   db-data:
