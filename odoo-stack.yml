@@ -10,13 +10,7 @@ services:
       - "POSTGRES_PASSWORD=${POSTGRES_ROOT_PASSWORD}"
       - "POSTGRES_DB=odooadd"
       - "POSTGRES_USER=odoo"
-    deploy:
-      labels:
-        - "traefik.enable=true"
-        - "traefik.port=8069"
-        - "traefik.docker.network=traefik-net"
-        - "traefik.frontend.rule=Host:${TRAEFIK_FR_Host}"
-        - "traefik.backend=${DOCKERCLOUD_CONTAINER_HOSTNAME}"
+
   odoo:
     image: odoo:latest
     networks:
@@ -28,6 +22,13 @@ services:
       - "HOST=db"
       - "USER=odoo"
       - "PASSWORD=${POSTGRES_ROOT_PASSWORD}"
+    deploy:
+      labels:
+        - "traefik.enable=true"
+        - "traefik.port=8069"
+        - "traefik.docker.network=traefik-net"
+        - "traefik.frontend.rule=Host:${TRAEFIK_FR_Host}"
+        - "traefik.backend=${DOCKERCLOUD_CONTAINER_HOSTNAME}"
 
 networks:
   local:
