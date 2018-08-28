@@ -14,8 +14,8 @@
       "env": [
         {
           "name": "TRAEFIK_FR_Host",
-          "label": "Subdomain",
-          "description": "Subdomain of the service for the reverse proxy."
+          "label": "Domain",
+          "description": "Domain of the service for the reverse proxy."
         }
       ]
     },
@@ -34,8 +34,8 @@
       "env": [
         {
           "name": "TRAEFIK_FR_Host",
-          "label": "Subdomain",
-          "description": "Subdomain of the service for the reverse proxy."
+          "label": "Domain",
+          "description": "Domain of the service for the reverse proxy."
         },
         {
           "name": "MYSQL_ROOT_PASSWORD",
@@ -94,8 +94,8 @@
       "env": [
         {
           "name": "TRAEFIK_FR_Host",
-          "label": "Subdomain",
-          "description": "Subdomain of the service for the reverse proxy."
+          "label": "Domain",
+          "description": "Domain of the service for the reverse proxy."
         },
         {
           "name": "POSTGRES_ROOT_PASSWORD",
@@ -119,8 +119,8 @@
       "env": [
         {
           "name": "TRAEFIK_FR_Host",
-          "label": "Subdomain",
-          "description": "Subdomain of the service for the reverse proxy."
+          "label": "Domain",
+          "description": "Domain of the service for the reverse proxy."
         }
       ]
     }
