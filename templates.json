@@ -101,11 +101,6 @@
           "name": "POSTGRES_ROOT_PASSWORD",
           "label": "Database root password",
           "description": "Password used by the PostgreSQL root user."
-        },
-        {
-          "name": "ODOO_PORT",
-          "label": "Port of the Odoo site",
-          "description": "Port used by the odoo site"
         }
       ]
     },
@@ -126,11 +121,6 @@
           "name": "TRAEFIK_FR_Host",
           "label": "Subdomain",
           "description": "Subdomain of the service for the reverse proxy."
-        },
-        {
-          "name": "AD_PORT",
-          "label": "Port of the Adminer site",
-          "description": "Port used by the adminer site"
         }
       ]
     }
