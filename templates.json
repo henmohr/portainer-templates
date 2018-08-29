@@ -21,7 +21,7 @@
     },
     {
       "type": "stack",
-      "title": "TheDiffrentWordpress",
+      "title": "TheDifferentWordpress",
       "description": "Wordpress setup with a MariaDB database based on Alpine Linux",
       "note": "Deploys a Wordpress instance connected to a MySQL database.",
       "categories": ["CMS"],
@@ -81,7 +81,7 @@
     },
     {
       "type": "stack",
-      "title": "TheDiffrentOdoo",
+      "title": "TheDifferentOdoo",
       "description": "Odoo setup with a PostgreSQL database based on Alpine Linux",
       "note": "Deploys a Odoo instance connected to a MySQL database.",
       "categories": ["CRM"],
@@ -106,7 +106,7 @@
     },
     {
       "type": "stack",
-      "title": "TheDiffrentAdminer",
+      "title": "TheDifferentAdminer",
       "description": "Standalone Adminer setup based on Alpine Linux",
       "note": "Deploys a Adminer instance to a chosen network.",
       "categories": ["DBGUI"],
