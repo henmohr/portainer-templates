@@ -2,43 +2,35 @@ version: '3.1'
 
 services:
   db:
-    image: postgres:11-alpine
-    networks:
-      - "local"
-      - "dbgui"
+    image: postgres:15
+    user: root
+    restart: always
     environment:
-      - "POSTGRES_PASSWORD=${POSTGRES_ROOT_PASSWORD}"
-      - "POSTGRES_DB=odooadd"
+      - "POSTGRES_PASSWORD=someOd00passwd"
+      - "POSTGRES_DB=odoo"
       - "POSTGRES_USER=odoo"
-
-  odoo:
-    image: odoo:latest
-    networks:
-      - "local"
-      - "rvproxy"
     volumes:
-      - "db-data:/var/lib/postgresql/data/pgdata"
+      - "odoo-db-data:/var/lib/postgresql/data"
+    
+  odoo16:
+    image: odoo:16
+    user: root
+    depends_on:
+      - db
+      
+    volumes:
+      - "odoo-db-data:/var/lib/postgresql/data/pgdata"
+      - "odoo-data:/mnt/extra-addons"
+      - "odoo-data:/etc:/etc/odoo"
+
     environment:
       - "HOST=db"
       - "USER=odoo"
-      - "PASSWORD=${POSTGRES_ROOT_PASSWORD}"
-    deploy:
-      labels:
-        - "traefik.enable=true"
-        - "traefik.port=8069"
-        - "traefik.docker.network=traefik-net"
-        - "traefik.frontend.rule=Host:${TRAEFIK_FR_Host}"
-        - "traefik.backend=${DOCKERCLOUD_CONTAINER_HOSTNAME}"
+      - "PASSWORD=someOd00passwd"
 
-networks:
-  local:
-    driver: overlay
-  dbgui:
-    external:
-      name: adminer-net
-  rvproxy:
-    external:
-      name: traefik-net
+volumes:
+  odoo-data:
+  odoo-db-data:
 
 volumes:
   db-data:
